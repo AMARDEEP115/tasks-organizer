@@ -1,5 +1,7 @@
 const mongoose=require("mongoose");
 
+
+// Schema of Attributes.
 const attributesSchema=mongoose.Schema({
     description:String,
     userID:String,
@@ -8,6 +10,8 @@ const attributesSchema=mongoose.Schema({
     sprintID:String
 });
 
+
+// Model of Attributes.
 const attributesModel=mongoose.model("attributes",attributesSchema);
 
 module.exports={attributesModel};

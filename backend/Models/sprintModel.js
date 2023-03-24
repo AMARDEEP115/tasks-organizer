@@ -1,10 +1,11 @@
 const mongoose=require("mongoose");
 
+// Schema of Sprints.
 const sprintSchema=mongoose.Schema({
-    name:String,
-    tasks:Array
+    name:String
 });
 
+// Model of Sprints.
 const sprintModel=mongoose.model("sprints",sprintSchema);
 
 module.exports={sprintModel};
