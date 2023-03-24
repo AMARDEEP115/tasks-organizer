@@ -1,0 +1,108 @@
+#Form{
+    border: 3px solid #4287f5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 30%;
+    margin: auto;
+    margin-top: 15vh;
+}
+#Form>input{
+    border: 1px solid #4287f5;
+    border-radius: 10px;
+    height: 45px;
+    width: 100%;
+}
+#Form>input::placeholder{
+    padding-left: 5%;
+}
+#Form>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#Form>div>input{
+    border: 1px solid #4287f5;
+    border-radius: 10px;
+    height: 45px;
+    width: 90%;
+}
+#Form>div>input::placeholder{
+    padding-left: 5%;
+}
+#bTn{
+    border: 1px solid #4287f5;
+    height: 45px;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+#bTn:hover{
+    border: 1px solid #4287f5;
+    background-color: #4287f5;
+    color: white;
+    height: 45px;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#Form>p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#Form>p>a{
+    color: #4287f5;
+    text-decoration: none;
+}
+
+
+
+#FormL{
+    border: 3px solid #4287f5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 25%;
+    margin: auto;
+    margin-top: 15vh;
+}
+#FormL>input{
+    border: 1px solid #4287f5;
+    border-radius: 10px;
+    height: 45px;
+    width: 100%;
+}
+#FormL>input::placeholder{
+    padding-left: 5%;
+}
+#FormL>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#FormL>div>input{
+    border: 1px solid #4287f5;
+    border-radius: 10px;
+    height: 45px;
+    width: 90%;
+}
+#FormL>div>input::placeholder{
+    padding-left: 5%;
+}
+#FormL>p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#FormL>p>a{
+    color: #4287f5;
+    text-decoration: none;
+}
