@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: cursive;
 }
 
 .App-logo {
@@ -35,4 +36,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .App h1{
+  font-family: cursive;
+}
+.App a{
+  font-family: cursive;
+}
+.App h2{
+  font-family: cursive;
+}
+.App p{
+  font-family: cursive;
+}
+.App input{
+  font-family: cursive;
+} */
+::-webkit-scrollbar {
+  width: 0px;
 }

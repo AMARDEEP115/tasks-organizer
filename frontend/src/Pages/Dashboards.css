@@ -1,0 +1,196 @@
+#Dashboard{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: whitesmoke;
+}
+#AddNewSprint{
+    border: 3px solid #4287f5;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 30px;
+    padding: 10px;
+    display: block;
+    margin-left: 2%;
+    color: #4287f5;
+    margin-bottom: 20px;
+}
+#AddNewSprint:hover{
+    background-color: #4287f5;
+    color: white;
+}
+
+
+.SingleSprint{
+    width: 96%;
+    margin: auto;
+    height: fit-content;
+}
+.SingleSprint>h1{
+    text-align: left;
+    border: 2px solid #4287f5;
+    background-color: #4287f5;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 25px;
+}
+
+.SingleSprint>div{
+    display: flex;
+    height: 100%;
+}
+
+.SprintsTaskTable{
+    border: 3px solid #4287f5;
+    border-radius: 0px 0px 0px 30px;
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.SprintsTaskTable>button{
+    border: 3px solid rgb(47, 160, 160);
+    background-color: rgb(47, 160, 160);
+    border-radius: 20px 20px 10px 10px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.SprintsTaskTable>button>h1{
+    width: 90%;
+    text-align: left;
+}
+.SprintsTaskTable>button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.SprintsTaskTable{
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4287f5; 
+    border-radius: 10px;
+}
+
+
+.SingleTasksView{
+    border: 3px solid rgb(181, 49, 242);
+    background-color: rgb(181, 49, 242);
+    border-radius:10px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SingleTasksView>h1{
+    width: 70%;
+    text-align: left;
+    overflow: hidden;
+}
+.SingleTasksView>div{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+}
+.SingleTasksView:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.SelectedSprintsTasksTable{
+    border: 3px solid #4287f5;
+    border-radius: 0px 30px 30px 0px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    /* padding-bottom: 12px; */
+    /* height: 600px; */
+}
+.SelectedSprintsTasksTable>div{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 92%;
+}
+.SelectedSprintsTasksTable>div>div{
+    border: 3px solid #4287f5;
+    border-radius:10px;
+    padding-bottom: 5px;
+    width: 32%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow: scroll;
+}
+.SelectedSprintsTasksTable>div>div>div{
+    margin-top: 10px;
+}
+.New>h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #4287f5;
+    color: white;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.InProgress>h1{
+    background-color: #4287f5;
+    color: white;
+    margin-bottom: 10px;
+}
+.Completed>h1{
+    background-color: #4287f5;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.SingleAtrribs{
+    padding: 7px;
+    border: 2px solid #4287f5;
+    margin-top: 10px;
+    width: 98%;
+    margin: auto;
+}
+.SingleAtrribs>div:first-child{
+    border: 2px solid #4287f5;
+    height: 100px;
+    overflow: scroll;
+    text-align: left;
+    padding: 5px;
+}
+.SingleAtrribs>p{
+    text-align: left;
+}
+.SingleAtrribs>div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.SingleAtrribs>div:last-child>div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

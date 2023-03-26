@@ -1,0 +1,14 @@
+.Deesp{
+    border: 2px solid rgb(135, 132, 132);
+    border-radius: 7px;    
+}
+.AddAttriSelectBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.AddAttriSelectBox>select{
+    border: 2px solid rgb(121, 118, 118);
+    border-radius: 7px;
+}

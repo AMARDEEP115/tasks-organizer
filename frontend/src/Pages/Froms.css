@@ -15,8 +15,6 @@
     border-radius: 10px;
     height: 45px;
     width: 100%;
-}
-#Form>input::placeholder{
     padding-left: 5%;
 }
 #Form>div{
@@ -30,8 +28,6 @@
     border-radius: 10px;
     height: 45px;
     width: 90%;
-}
-#Form>div>input::placeholder{
     padding-left: 5%;
 }
 #bTn{
@@ -79,8 +75,6 @@
     border-radius: 10px;
     height: 45px;
     width: 100%;
-}
-#FormL>input::placeholder{
     padding-left: 5%;
 }
 #FormL>div{
@@ -94,8 +88,6 @@
     border-radius: 10px;
     height: 45px;
     width: 90%;
-}
-#FormL>div>input::placeholder{
     padding-left: 5%;
 }
 #FormL>p{
@@ -105,4 +97,61 @@
 #FormL>p>a{
     color: #4287f5;
     text-decoration: none;
+}
+
+@media screen and (min-width:1024px) and (max-width:1144px) {
+    #Form{
+        width: 35%;
+    }
+    #FormL{
+        width: 35%;
+    }
+}
+@media screen and (min-width:888px) and (max-width:1024px) {
+    #Form{
+        width: 35%;
+    }
+    #FormL{
+        width: 35%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:888px) {
+    #Form{
+        width: 37%;
+    }
+    #FormL{
+        width: 37%;
+    }
+}
+@media screen and (min-width:685px) and (max-width:768px) {
+    #Form{
+        width: 43%;
+    }
+    #FormL{
+        width: 43%;
+    }
+}
+@media screen and (min-width:605px) and (max-width:685px) {
+    #Form{
+        width: 45%;
+    }
+    #FormL{
+        width: 45%;
+    }
+}
+@media screen and (min-width:425px) and (max-width:605px) {
+    #Form{
+        width: 60%;
+    }
+    #FormL{
+        width: 60%;
+    }
+}
+@media screen and (min-width:225px) and (max-width:425px) {
+    #Form{
+        width: 80%;
+    }
+    #FormL{
+        width: 80%;
+    }
 }

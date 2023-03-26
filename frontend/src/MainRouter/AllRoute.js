@@ -6,16 +6,16 @@ import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import PrivateRoute from "./PrivateRoute";
 
-const AllRoute=()=>{
+const AllRoute=({isAuth,setIsAuth})=>{
     return <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path="/dashboard" element={<PrivateRoute>
-            <Dashboard/>
+        <Route path="/" element={<Home isAuth={isAuth}/>} />
+        <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
+        <Route path="/signup" element={<Signup setIsAuth={setIsAuth}/>} />
+        <Route path="/dashboard" element={<PrivateRoute isAuth={isAuth}>
+            <Dashboard isAuth={isAuth}/>
         </PrivateRoute>} />
-        <Route path="/users" element={<PrivateRoute>
-            <Allusers/>
+        <Route path="/users" element={<PrivateRoute isAuth={isAuth}>
+            <Allusers isAuth={isAuth}/>
         </PrivateRoute>} />
     </Routes>
 }
