@@ -109,9 +109,9 @@ const EditAttributeBox=({dashDisp,setDashDisp,sprintID,taskID,attributeID,assign
         <AlertDialogCloseButton />
         <AlertDialogBody w="fit-content" margin="auto">
           {!load && <input type="text" className="Deesp" value={attribute.description} placeholder="Description..." style={{height:"50px",width:"250px",paddingLeft:"2%"}} onChange={(e)=>setAttribute({...attribute,description:e.target.value})}/>}
-          {!load && <div className="AddAttriSelectBox"><h1>Assign To :</h1><select value={attribute.assignedTo} onChange={(e)=>setAttribute({...attribute,assignedTo:e.target.value})}>
+          {!load && <div className="AddAttriSelectBox"><h1>Assign To :</h1><select value={attribute.assignedTo._id} onChange={(e)=>setAttribute({...attribute,assignedTo:AllUsers.find(elUse=>elUse._id===e.target.value)})}>
             <option value="">--select--</option>
-            {AllUsers.map((el,index)=><option key={index} value={el}>{el.name}</option>)}
+            {AllUsers.map((el,index)=><option key={index} value={el._id}>{el.name}</option>)}
           </select></div>}
           {!load && <div className="AddAttriSelectBox"><h1>State :</h1><select value={attribute.state} onChange={(e)=>setAttribute({...attribute,state:e.target.value})}>
             <option value="">--select--</option>

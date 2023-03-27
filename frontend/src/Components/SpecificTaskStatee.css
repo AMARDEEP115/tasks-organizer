@@ -1,0 +1,9 @@
+.S3lectBox+hr{
+    border: none;
+    border-top: 3px double #4f86f3;
+    color: #4f86f3;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    margin-top: 10px;
+}

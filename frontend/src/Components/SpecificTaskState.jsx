@@ -1,4 +1,5 @@
 import React from "react";
+import "./SpecificTaskStatee.css";
 
 const SpecificTaskState=({el,userId})=>{
     const [taskState,setTaskState]=React.useState({task:"",state:""});
@@ -20,6 +21,7 @@ const SpecificTaskState=({el,userId})=>{
                         <option value="completed">Completed</option>
                     </select>
                 </div>
+                <hr/>
                 <div className="TaskDisplay">
                     {el.tasks.map((elTasks)=>elTasks.Attribure.map((elAtribs,indexC)=>{
                         if(elAtribs.assignedTo._id===userId){
