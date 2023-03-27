@@ -30,7 +30,8 @@ const Allusers=({isAuth})=>{
                 </div>)}
             </div>
             <div  id="AlluersRightSection">
-                {viewProfile!=="" && <SingleUserDetails  userId={viewProfile}/>}
+                {/* {viewProfile!=="" && <SingleUserDetails  userId={viewProfile}/>} */}
+                {AllUsers.map((el,index)=><SingleUserDetails key={index}  userId={el._id} viewProfile={viewProfile}/>)}
             </div>
         </div>
     </div>

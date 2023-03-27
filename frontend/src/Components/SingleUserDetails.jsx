@@ -1,53 +1,68 @@
-import { Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import "./SingleUserDetailss.css";
+import SpecificTaskState from "./SpecificTaskState";
 
-const SingleUserDetails=({userId})=>{
+const SingleUserDetails=({userId,viewProfile})=>{
+    const [userDisp,setUserDisp]=React.useState([]);
+
+    const AllUsers=useSelector(store=>store.UserReducer.allUsers);
     const AllSprints=useSelector(store=>store.SprintReducer.sprints);
     const AllTasks=useSelector(store=>store.TaskReducer.allTasks);
     const AllAttributes=useSelector(store=>store.AttributesReducer.attributes);
 
-    let usersAttributes=[];
-    usersAttributes=AllAttributes.map((el)=>el.userID===userId);
-    let userTasks=[];
-    for(let i=0;i<usersAttributes.length;i++){
-        let obj={}
-        for(let j=0;j<AllTasks.length;j++){
-            if(usersAttributes[i].taskID===AllTasks[j]._id){
-                userTasks.push(AllTasks[j]);
-            }
-        }
-    }
-    let userSprints=[];
-    for(let i=0;i<usersAttributes.length;i++){
-        for(let j=0;j<AllSprints.length;j++){
-            if(usersAttributes[i].sprintID===AllSprints[j]._id){
-                userSprints.push(AllSprints[j]);
-            }
-        }
-    }
+    let usersDetails=AllUsers.find((elUser)=>elUser._id===userId);
+    let LoggedInUser=JSON.parse(localStorage.getItem("userTask"));
 
-    // if(usersAttributes.length>0 && userTasks.length>0 && userSprints.length>0){
-    //     return 
-    // }
-    return <div>
-        {userSprints.map((el)=>{
-            return <div style={{border:"3px solid red"}}>
-                {userTasks.map((eltask)=>{
-                    if(el._id===eltask.sprintID){
-                        return <div style={{border:"3px solid blue"}}>
-                            {usersAttributes.map((elAtri)=>{
-                                if(elAtri.sprintID===eltask._id){
-                                    return <div style={{border:"3px solid green"}}>
-                                        {elAtri.description}
-                                    </div>
-                                }
-                            })}
-                        </div>
-                    }
-                })}
+    useEffect(()=>{
+        let arr=[];
+        let x=AllSprints.map((el)=>{
+            let obj={};
+            obj.sprintName=el.name;
+            obj.sprintID=el._id;
+            obj.tasks=[];
+            AllTasks.map((elTask)=>{
+                if(elTask.sprintID===el._id){
+                    let inObj={};
+                    inObj.taskName=elTask.name;
+                    inObj.taskID=elTask._id;
+                    inObj.Attribure=[];
+                    AllAttributes.map((elAtri)=>{
+                        if(elAtri.sprintID===el._id && elAtri.taskID===elTask._id){
+                            if(elAtri.userID===userId){
+                                let ininObj={
+                                    attributeID:elAtri._id,
+                                    taskID:elAtri.taskID,
+                                    sprintID:elAtri.sprintID,
+                                    description:elAtri.description,
+                                    assignedTo:AllUsers.find((elUser)=>elUser._id===userId),
+                                    state:elAtri.state,
+                                };
+                                inObj.Attribure.push(ininObj);
+                            }
+                        }
+                    });
+                    obj.tasks.push(inObj);
+                };
+            })
+            arr.push(obj);
+        });
+        setUserDisp(arr);
+    },[]);
+    return <div style={{display:userId===viewProfile?"block":"none"}}>
+        <div id="UserProfileContainer">
+            <div>
+                <h1>NAME : <span>{usersDetails.name}</span></h1>
+                <h1>EMAIL : <span>{usersDetails.email}</span></h1>
+                <h1>MOBILE : <span>{usersDetails.mobile}</span></h1>
             </div>
-        })}
+            <div>
+                {LoggedInUser._id===userId && <h1>Logged In</h1>}
+            </div>
+        </div>
+        <div id="UserTasksContainer">
+            {userDisp.map((el,indexA)=><SpecificTaskState key={indexA} el={el} userId={userId}/>)}
+        </div>
     </div>
 }
 

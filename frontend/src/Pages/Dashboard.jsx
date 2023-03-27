@@ -21,9 +21,9 @@ const Dashboard=({isAuth})=>{
     // console.log(AllTasks);
     // console.log(AllAttributes);
 
-    if(dashDisp.length>0){
-        console.log(dashDisp);
-    }
+    // if(dashDisp.length>0){
+    //     console.log(dashDisp);
+    // }
     
     useEffect(()=>{
         let arr=[];

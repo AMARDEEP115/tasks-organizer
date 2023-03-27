@@ -1,0 +1,81 @@
+#UserProfileContainer{
+    border: 3px solid red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#UserProfileContainer>div:first-child{
+    text-align: left;
+}
+#UserProfileContainer>div:first-child>h1>span{
+    color: #4287f5;
+    font-weight: bold;
+}
+#UserTasksContainer{
+    border: 3px solid red;
+    border-radius: 10px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+.SingleSprintView{
+    border: 3px solid green;
+    border-radius: 10px;
+    height: 100%;
+    padding-top: 10px;
+    width: 320px;
+}
+.S3lectBox{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    width: 231px;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 1px;
+}
+.S3lectBox>select{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.TaskDisplay{
+    border-radius: 10px;
+    height: 325px;
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+.SinggleTassk{
+    height: 100px;
+    border: 1px solid red;
+    border-radius: 10px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.TaskDisplay::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+.TaskDisplay::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+.TaskDisplay::-webkit-scrollbar-thumb {
+    background: #4287f5; 
+    border-radius: 10px;
+}

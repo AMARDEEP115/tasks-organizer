@@ -23,8 +23,6 @@ const AddAttributeBox=({dashDisp,setDashDisp,sprintID,taskID})=>{
     const { isOpen, onOpen, onClose } = useDisclosure();
     const toast = useToast();
 
-    console.log(AllUsers);
-
     const AddNewAttribute=()=>{
         setLoad(true);
         console.log(attribute);

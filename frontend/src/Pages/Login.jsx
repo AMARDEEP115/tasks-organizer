@@ -48,7 +48,7 @@ const Login=({setIsAuth})=>{
                 toast({
                     title: 'Error.',
                     description: "User not found, please signup first",
-                    status: 'Error',
+                    status: 'error',
                     duration: 2000,
                     isClosable: true,
                     position: "top",
